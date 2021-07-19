@@ -1,0 +1,36 @@
+﻿@model LibraryApplication.Models.Customer
+
+@{
+    ViewBag.Title = "editCustomer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EditCustomer</h2>
+<div class="container">
+    <form action="editCustomer" method="post">
+        <table class="table table-bordered">
+            <tr>
+                <th>Customer ID</th>
+                <td>@Html.TextBox("CustomerID")</td>
+            </tr>
+            <tr>
+                <th>Customer Name</th>
+                <td>@Html.TextBox("CustomerName")</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>@Html.TextBox("City")</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>@Html.TextBox("Address")</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit" />
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</div>

@@ -1,0 +1,37 @@
+﻿@model LibraryApplication.Models.Customer
+
+@{
+    ViewBag.Title = "addCustomer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddCustomer</h2>
+<form action="@Url.Action("addCustomer")" method="post">
+    <div class="container">
+        <table class="table">
+
+            <tr>
+                <td>ID</td>
+                <td>@Html.TextBox("CustomerID")  @Html.ValidationMessage("CustomerID")</td>
+
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>@Html.TextBox("CustomerName")  @Html.ValidationMessage("CustomerName")</td>
+
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>@Html.TextBox("City")</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>@Html.TextArea("Address")</td>
+            </tr>
+
+            <tr>
+                <td> <input type="submit" value="Register" /></td>
+            </tr>
+        </table>
+    </div>
+</form>
